@@ -16,21 +16,95 @@ ROOT_DIR = os.path.dirname(CURRENT_DIR)
 sys.path.insert(0, ROOT_DIR)
 sys.path.insert(0, CURRENT_DIR)
 
-from src.preprocessor import clean_text, DEFAULT_CATEGORIES
-from src.inference import ROUTING_CONFIG
+import re
+
+# Domain mappings for Department Routing & SLA
+DEFAULT_CATEGORIES = [
+    "Payment Issue",
+    "Login Problem",
+    "Order Status",
+    "Refund Request",
+    "Technical Support",
+    "Account Issue",
+    "Product Complaint",
+    "Delivery Issue"
+]
+
+ROUTING_CONFIG = {
+    "Payment Issue": {
+        "department": "Billing & Financial Operations",
+        "team_email": "billing-ops@support.company.com",
+        "default_sla_hours": 4
+    },
+    "Login Problem": {
+        "department": "Identity, Access & Security Support",
+        "team_email": "security-support@support.company.com",
+        "default_sla_hours": 2
+    },
+    "Order Status": {
+        "department": "Order Management & Fulfillment",
+        "team_email": "orders@support.company.com",
+        "default_sla_hours": 12
+    },
+    "Refund Request": {
+        "department": "Returns & Refund Processing",
+        "team_email": "refunds@support.company.com",
+        "default_sla_hours": 8
+    },
+    "Technical Support": {
+        "department": "Engineering & Tier-2 Tech Support",
+        "team_email": "tech-tier2@support.company.com",
+        "default_sla_hours": 6
+    },
+    "Account Issue": {
+        "department": "Customer Accounts & Profile Management",
+        "team_email": "accounts@support.company.com",
+        "default_sla_hours": 24
+    },
+    "Product Complaint": {
+        "department": "Product Quality & Warranty Assurance",
+        "team_email": "quality@support.company.com",
+        "default_sla_hours": 12
+    },
+    "Delivery Issue": {
+        "department": "Logistics & Courier Operations",
+        "team_email": "logistics@support.company.com",
+        "default_sla_hours": 8
+    }
+}
+
+def clean_text(text: str) -> str:
+    if not isinstance(text, str):
+        return ""
+    text = text.lower()
+    text = re.sub(r"https?://\S+|www\.\S+", " [URL] ", text)
+    text = re.sub(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b", " [EMAIL] ", text)
+    text = re.sub(r"[\$\€\£]\s?\d+(?:\.\d{2})?", " [AMOUNT] ", text)
+    text = re.sub(r"#\d+", " [REF] ", text)
+    text = re.sub(r"ref-?\d+", " [REF] ", text)
+    text = re.sub(r"[^\w\s\[\]]", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
 
 app = Flask(__name__)
 
-# Load model weights (prefers lightweight joblib for Vercel <250MB limit)
-MODEL_PATH = os.path.join(ROOT_DIR, "models", "lightweight_model.joblib")
-model_pipeline = None
+# Load model weights (checks api directory first, then models directory)
+CANDIDATE_PATHS = [
+    os.path.join(CURRENT_DIR, "lightweight_model.joblib"),
+    os.path.join(ROOT_DIR, "models", "lightweight_model.joblib"),
+    "api/lightweight_model.joblib",
+    "models/lightweight_model.joblib"
+]
 
-if os.path.exists(MODEL_PATH):
-    try:
-        model_pipeline = joblib.load(MODEL_PATH)
-        print("Loaded lightweight Vercel inference model.")
-    except Exception as e:
-        print(f"Error loading lightweight model: {e}")
+model_pipeline = None
+for path in CANDIDATE_PATHS:
+    if os.path.exists(path):
+        try:
+            model_pipeline = joblib.load(path)
+            print(f"Loaded lightweight Vercel inference model from: {path}")
+            break
+        except Exception as e:
+            print(f"Error loading model from {path}: {e}")
 
 def estimate_urgency(text: str):
     text_lower = text.lower()
