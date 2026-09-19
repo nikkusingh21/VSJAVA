@@ -1,0 +1,279 @@
+{
+  "model_architecture": "BiLSTM + Self-Attention Pooling",
+  "num_classes": 8,
+  "vocab_size": 991,
+  "embedding_dim": 128,
+  "hidden_dim": 128,
+  "test_accuracy": 1.0,
+  "test_f1": 1.0,
+  "test_loss": 0.0003,
+  "categories": [
+    "Payment Issue",
+    "Login Problem",
+    "Order Status",
+    "Refund Request",
+    "Technical Support",
+    "Account Issue",
+    "Product Complaint",
+    "Delivery Issue"
+  ],
+  "training_history": {
+    "epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "train_loss": [
+      1.4104,
+      0.1994,
+      0.0396,
+      0.0173,
+      0.0109,
+      0.0073,
+      0.0061,
+      0.0042,
+      0.0037,
+      0.0026,
+      0.0025,
+      0.002,
+      0.0018,
+      0.0016,
+      0.0016,
+      0.0013,
+      0.0662,
+      0.0661,
+      0.0183,
+      0.0066
+    ],
+    "val_loss": [
+      0.39,
+      0.0336,
+      0.0098,
+      0.005,
+      0.003,
+      0.0021,
+      0.0015,
+      0.0011,
+      0.0009,
+      0.0007,
+      0.0006,
+      0.0005,
+      0.0004,
+      0.0003,
+      0.0003,
+      0.0003,
+      0.0601,
+      0.0064,
+      0.0007,
+      0.0004
+    ],
+    "train_acc": [
+      0.5467,
+      0.9825,
+      0.9983,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9817,
+      0.9783,
+      0.9942,
+      0.9992
+    ],
+    "val_acc": [
+      0.9583,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.975,
+      0.9958,
+      1.0,
+      1.0
+    ]
+  },
+  "classification_report": {
+    "Payment Issue": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20.0
+    },
+    "Login Problem": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20.0
+    },
+    "Order Status": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20.0
+    },
+    "Refund Request": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20.0
+    },
+    "Technical Support": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20.0
+    },
+    "Account Issue": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20.0
+    },
+    "Product Complaint": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20.0
+    },
+    "Delivery Issue": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 160.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 160.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      20,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      20,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      20,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      20,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      20
+    ]
+  ],
+  "trained_at": "2026-09-19 10:47:58",
+  "training_time_seconds": 19.26
+}

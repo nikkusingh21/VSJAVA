@@ -1,0 +1,32 @@
+{
+  "categories": [
+    "Payment Issue",
+    "Login Problem",
+    "Order Status",
+    "Refund Request",
+    "Technical Support",
+    "Account Issue",
+    "Product Complaint",
+    "Delivery Issue"
+  ],
+  "label2idx": {
+    "Payment Issue": 0,
+    "Login Problem": 1,
+    "Order Status": 2,
+    "Refund Request": 3,
+    "Technical Support": 4,
+    "Account Issue": 5,
+    "Product Complaint": 6,
+    "Delivery Issue": 7
+  },
+  "idx2label": {
+    "0": "Payment Issue",
+    "1": "Login Problem",
+    "2": "Order Status",
+    "3": "Refund Request",
+    "4": "Technical Support",
+    "5": "Account Issue",
+    "6": "Product Complaint",
+    "7": "Delivery Issue"
+  }
+}

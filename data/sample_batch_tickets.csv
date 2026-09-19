@@ -1,0 +1,26 @@
+ticket_id,customer_name,ticket_text
+TCK-11564,Avery Singh,"To whom it may concern: Requested weekend delivery when placing order #607053, but carrier attempted delivery on Wednesday during work hours. Please help me resolve this ASAP."
+TCK-10601,Avery Williams,"Hey, Requested a refund 2 weeks ago for order #609668. Still waiting. If not processed today, I will have to file a credit card chargeback. Appreciate your quick assistance."
+TCK-11488,Ananya Miller,"Dear Customer Service, The parcel was left out in heavy pouring rain on my uncovered driveway instead of under the covered front porch. Let me know how to proceed."
+TCK-10538,Daniel Jones,"To whom it may concern: Could you confirm if order #647054 has been dispatched? The estimated arrival date was today, but no courier updates yet. Thanks."
+TCK-10557,Casey Williams,"Hello, Can you please provide the latest tracking status for my order #609265? Placed it 6 days ago and haven't received any dispatch email. Please help me resolve this ASAP."
+TCK-11276,Rahul Jones,"Hello, Shoes look like they were previously worn; the soles are scuffed and dirty right out of the sealed shipping box. Thank you!"
+TCK-10937,Mia Garcia,"Hey, WebSocket connection drops repeatedly with code 1006. Reconnection attempts cause UI lag and high CPU consumption. Let me know how to proceed."
+TCK-10838,Neha Brown,"To whom it may concern: File upload feature fails for files larger than 15MB with 'Payload Too Large' error, despite our plan allowing up to 100MB uploads. Thank you!"
+TCK-10246,Olivia Garcia,"Hello, Single Sign-On (SSO) via Google returns an error 'OAuth2 callback failed: 403 Forbidden'. Unable to access my dashboard. Please help me resolve this ASAP."
+TCK-11450,Neha Tanaka,"Help needed: Requested weekend delivery when placing order #738159, but carrier attempted delivery on Wednesday during work hours. Let me know how to proceed."
+TCK-11237,David Martinez,"To whom it may concern: You sent me the wrong color! I ordered Midnight Blue, but you shipped bright yellow. I need the correct item sent ASAP. Please help me resolve this ASAP."
+TCK-11417,Riley Garcia,"The courier attempted delivery at 6:30 AM without ringing the doorbell, left a 'Failed Attempt' slip, and returned it to the depot. Looking forward to your prompt response."
+TCK-10165,Sophia Brown,You charged me an extra $800.25 processing fee which was not shown on the checkout summary page. I need this rectified. Let me know how to proceed.
+TCK-10737,Alex Smith,Help needed: Please cancel my annual subscription renewal and issue a full refund as per your 30-day money-back guarantee policy. Let me know how to proceed.
+TCK-11211,Rahul Rodriguez,"Dear Customer Service, The software license key printed on the inside card says 'Already Redeemed by another user'. I bought this brand new sealed. Looking forward to your prompt response."
+TCK-10994,Rahul Jones,Urgent: Database sync is failing between the mobile client and the cloud server. Offline edits are completely lost upon reconnecting.
+TCK-11565,Amelia Verma,"To whom it may concern: The courier driver refused to bring the heavy 45kg parcel up to my apartment floor, leaving it on the street sidewalk. Appreciate your quick assistance."
+TCK-11514,Ethan Martinez,"Dear Customer Service, The delivery status has said 'Out for Delivery' for three consecutive days from 8 AM to 9 PM, but driver never shows up. Let me know how to proceed."
+TCK-11430,Emma Miller,"Dear Customer Service, Requested weekend delivery when placing order #941937, but carrier attempted delivery on Wednesday during work hours."
+TCK-11162,Alex Tanaka,"Hello, Our team seat count is capped at 5, but our invoice shows 10 active licenses. Please audit our user seats and adjust the billing tier. This is very frustrating."
+TCK-10072,Alex Brown,Bank statement shows two identical deductions of $294.50 dated yesterday for the same order #128820. Kindly refund the extra deduction. Thanks.
+TCK-10060,Emma Sharma,"Hi Support Team, The installment payment option failed to split my bill, and you deducted the full amount of $24.99 at once. Please correct the installment plan. Let me know how to proceed."
+TCK-11558,Morgan Singh,My delivery is delayed by over 6 business days with zero explanations from the courier service. Placed order #986168.
+TCK-11420,Sophia Martinez,"Hi Support Team, Requested weekend delivery when placing order #293240, but carrier attempted delivery on Wednesday during work hours. Thank you!"
+TCK-11442,Mia Kim,"Hello, Courier says delivery address is 'Incomplete / Missing Apt Number' even though my order confirmation shows complete details. Please help me resolve this ASAP."
